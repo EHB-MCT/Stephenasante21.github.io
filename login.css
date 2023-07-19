@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #0D0D0F;
+}
+
+/*Container */
+.container{
+    display: flex;
+    height: 500px;
+    width: 800px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 38px;
+}
+
+/*Login form*/
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    background-color: #BF0603;
+    border-radius: 38px;
+}
+.form h2{
+    font-size: 3rem;
+    font-family: aileron;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "web2-frontend-stephenasante21",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EHB-MCT/web2-frontend-Stephenasante21.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EHB-MCT/web2-frontend-Stephenasante21/issues"
+  },
+  "homepage": "https://github.com/EHB-MCT/web2-frontend-Stephenasante21#readme",
+  "dependencies": {
+    "mongodb": "^5.7.0",
+    "node": "^20.4.0"
+  }
+}
