@@ -5,15 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h2>ART DUMP</h2>
-        <h3>Dump your art. And connect with others</h3>
-        <form action="" class="form">
+    <div id="loginform">
+        <div class="login-text">
+            <h2>ART DUMP</h2>
+            <h3>Dump your art. Connect with others</h3>
+        </div>
+
+        <form id="form" action="" class="form">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn">Log in</button>
+                <button type="button" class="toggle-btn">Register</button>
+            </div>
+            
+            <input type="email" id="email" name="email" class="box" placeholder="Enter your email">
+            <input type="password" id="password" name="password" class="box" placeholder="Enter your password">
+            <button type="submit" id="submit">SIGN IN</button>
+
+            <!--<input type="username" name="username" class="box" placeholder="Enter your Username">
             <input type="email" name="email" class="box" placeholder="Enter your email">
             <input type="password" name="password" class="box" placeholder="Enter your password">
-            <input type="submit" name="SIGN IN" id="submit">
+            <input type="submit" name="SIGN IN" id="submit" value="REGISTER">-->
         </form>
     </div>
 </body>
