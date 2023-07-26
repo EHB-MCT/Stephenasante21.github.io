@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <link rel="stylesheet" href="login.css">
-    <script src="login.js" defer></script>
+    <script src="register.js" defer></script>
 </head>
 <body>
     <div id="loginform">
@@ -15,11 +15,13 @@
         </div>
 
         <form id="form" action="" class="form">
-            <h2>Sign into your account</h2>            
+            <h2>Sign up now</h2>      
+            <input type="username" id="username" name="username" class="box" placeholder="Enter your Username">
             <input type="email" id="email" name="email" class="box" placeholder="Enter your email">
             <input type="password" id="password" name="password" class="box" placeholder="Enter your password">
-            <button type="submit" id="submit">SIGN IN</button>
-            <p>Don't have an account?</p><a href="register.html">Register here</a>
+            <input type="password" id="password2" name="password2" class="box" placeholder="Confirm your password">
+            <button type="submit" id="submit">REGISTER</button>
+            <p>Already have an account?</p><a href="login.html">Sign in here</a>
         </form>
     </div>
 </body>
