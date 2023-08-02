@@ -3,8 +3,19 @@
     padding: 0;
     box-sizing: border-box;
     background-color: #0D0D0F;
+    font-family: DMsans;
 }
-
+@font-face{
+    font-family: Alerion;
+    src: url(../fonts/Aileron-Heavy.otf) format('otf');
+}
+@font-face {
+    font-family: DMsans;
+    src: url(../fonts/static/DMSans-Regular.ttf);
+}
+h1{
+    font-family: Alerion;
+}
 /*Container */
 #loginform{
     display: flex;
@@ -25,10 +36,10 @@
     background-color: #BF0603;
     border-radius: 38px;
 }
-.login-text h2{
+.login-text h1{
     margin-top: 50%;
 }
-.login-text h2,h3{
+.login-text h1,h3{
 
     background-color: #BF0603;
     color: #E4E4E4;

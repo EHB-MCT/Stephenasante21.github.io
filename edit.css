@@ -1,0 +1,150 @@
+/*general*/
+@font-face{
+    font-family: Alerion;
+    src: url(../fonts/Aileron-Heavy.otf) format('otf');
+}
+@font-face {
+    font-family: DMsans;
+    src: url(../fonts/static/DMSans-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0D0D0F;
+    color: #ECE9EE;
+    font-family: DMsans;
+}
+
+h1{
+    font-family: Alerion;
+}
+h2 {
+    margin-bottom: 20px;
+}
+
+/*Header*/
+header {
+    color: #fff;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #ECE9EE;
+}
+  
+#logo {
+    margin-left: 10px;
+}
+   
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+  
+nav ul li {
+    margin-right: 20px;
+}
+  
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+  
+nav ul li a:hover {
+    color: #BF0603;
+}
+  
+#page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    margin: auto;
+}
+/*page*/  
+/*profile*/
+#profilepic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+  
+#profilepic h3 {
+    margin-bottom: 10px;
+}
+  
+#profilepic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+  
+#profilepic button {
+    background-color: #939196;
+    color: #0D0D0F;
+    border: none;
+    border-radius: 38px;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px;
+}
+  
+#profilepic button:hover {
+    background-color: #BF0603;
+    color: #ECE9EE;
+}
+/*form*/
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 38px;
+    margin: auto;
+}
+.box {
+    display: block;
+    width: 500px;
+    padding: 15px;
+    margin-bottom: 30px;
+    background-color: #ECE9EE;
+    border: none;
+    border-radius: 38px;
+}  
+/*text erea*/
+textarea{
+    display: block;
+    padding: 15px;
+    margin-bottom: 30px;
+    background-color: #ECE9EE;
+    border: none;
+    border-radius: 28px;
+    max-width: 500px;
+    min-height: 50px;
+    font-family: DMsans;
+    color: #939196;
+}
+.form button {
+    padding: 12px 30px;
+    width: 250px;
+    background-color: #939196;
+    border-radius: 38px;
+    border: 2px #939196;
+    color: #0D0D0F;
+    font-weight: bold;
+    margin-bottom: 10px;
+} 
+.form button:hover{
+    cursor: pointer;
+    background-color: #BF0603;
+    color: #E4E4E4;
+} 
+
+  

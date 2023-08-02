@@ -1,0 +1,128 @@
+/*general*/
+@font-face{
+    font-family: Alerion;
+    src: url(../fonts/Aileron-Heavy.otf) format('otf');
+}
+@font-face {
+    font-family: DMsans;
+    src: url(../fonts/static/DMSans-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0D0D0F;
+    color: #ECE9EE;
+    font-family: DMsans;
+}
+
+h1{
+    font-family: Alerion;
+}
+h2 {
+    margin-bottom: 20px;
+}
+
+/*Header*/
+header {
+    color: #fff;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #ECE9EE;
+}
+  
+#logo {
+    margin-left: 10px;
+}
+   
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+  
+nav ul li {
+    margin-right: 20px;
+}
+  
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+  
+nav ul li a:hover {
+    color: #BF0603;
+}
+
+/*Profile*/
+#profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+#profile h3 {
+    margin-bottom: 10px;
+    
+}
+  
+#profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#button-container {
+    display: flex;
+    justify-content: center;
+}
+#profile button{
+    padding: 12px 30px;
+    width: 200px;
+    background-color: #939196;
+    border-radius: 38px;
+    border: 2px #939196;
+    color: #0D0D0F;
+    font-weight: bold;
+    margin: 10px;
+}
+
+#profile button:hover{
+    cursor: pointer;
+    background-color: #BF0603;
+    color: #E4E4E4;
+}
+
+/*page*/
+h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+/*grid*/
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 95%;
+    margin: auto;
+}
+.grid-item {
+    margin: 5px;
+    overflow: hidden;
+    border-radius: 10px;
+    height: fit-content;
+}
+.grid-item img {
+    max-height: 300px;
+    display: block;
+    height: auto;
+}
+.grid-item:hover{
+    opacity: 50%;
+}
