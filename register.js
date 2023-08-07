@@ -2,7 +2,7 @@ document.getElementById('form').addEventListener("submit", event => {
     event.preventDefault();
 
     let user = {}
-    user.username = document.getElementById("username")
+    user.username = document.getElementById("username").value;
     user.email = document.getElementById("email").value;
     user.password = document.getElementById("password").value;
     user.password2 = document.getElementById("password2").value;
@@ -10,6 +10,7 @@ document.getElementById('form').addEventListener("submit", event => {
     //check for the password
     if(user.password == user.password2){
         getData("http://localhost:3000/register", "POST", user).then(data => {
+            window.location.href = "/web2-frontend-Stephenasante21/Login.html"
             alert(data.message)
         })
     }else{

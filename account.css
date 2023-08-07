@@ -77,21 +77,22 @@ nav ul li a:hover {
     object-fit: cover;
 }
 #button-container {
-    display: flex;
+    margin: 30px;
     justify-content: center;
 }
-#profile button{
+#profile a{
     padding: 12px 30px;
-    width: 200px;
+    width: 300px;
     background-color: #939196;
     border-radius: 38px;
     border: 2px #939196;
     color: #0D0D0F;
     font-weight: bold;
     margin: 10px;
+    text-decoration: none;
 }
 
-#profile button:hover{
+#profile a:hover{
     cursor: pointer;
     background-color: #BF0603;
     color: #E4E4E4;

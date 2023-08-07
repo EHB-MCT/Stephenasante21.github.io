@@ -20,7 +20,6 @@ const imagegrid = document.getElementById("grid");
 async function fetchImages(){
     try{
         const response = await fetch("http://localhost:3000/artpieces");
-        console.log("images test")
         return await response.json();
         
     } catch (error){
