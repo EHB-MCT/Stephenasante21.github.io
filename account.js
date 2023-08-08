@@ -37,15 +37,9 @@ async function displayImages(){
     console.log(images);
 
     images.forEach(element => {
-        const imageDiv = document.createElement("div");
-        imageDiv.className = "grid-item";
-
-        const imgElement = document.createElement("img");
-        imgElement.src = `../databaseverzameling/${element.img_url}.jpg`;
-        imgElement.alt = element.title;
-
-        imageDiv.appendChild(imgElement);
-        imagegrid.appendChild(imageDiv);
+        document.getElementById('grid').innerHTML += `
+            <div class="grid-item" id="${element.img_url}"><img src="../databaseverzameling/${element.img_url}.jpg" alt=""></div>
+        `
     });
 }
 
