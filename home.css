@@ -77,7 +77,7 @@ p{
     background-color: #E4E4E4;
     text-align: left;
     box-sizing: border-box;
-    width: 45%;
+    width: 50%;
 }
 #searchButton{
     padding: 8px 25px;
@@ -99,6 +99,7 @@ p{
     justify-content: center;
     max-width: 95%;
     margin: auto;
+    margin-bottom: 50px;
 }
 .grid-item {
     margin: 5px;

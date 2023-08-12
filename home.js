@@ -12,17 +12,21 @@ window.onload = () => {
     });
 }*/
 
-
+let DISPLAYED_IMAGES = []; 
+let ALL_IMAGES = [];
 
 //display the images from the database
 const imagegrid = document.getElementById("grid");
 
 //fetch the data
-async function fetchImages(){
+async function fetchAndDisplayImages(){
     try{
         const response = await fetch("http://localhost:3000/artpieces");
-        return await response.json();
-        
+        DISPLAYED_IMAGES = ALL_IMAGES =  await response.json();
+
+        console.log(ALL_IMAGES)
+        displayImages()
+
     } catch (error){
         console.error("error fetching images:", error);
         return [];
@@ -31,10 +35,9 @@ async function fetchImages(){
 
 //display the images in the grid
 async function displayImages(){
-    const images = await fetchImages();
-    console.log(images);
+    document.getElementById('grid').innerHTML = "";    
 
-    images.forEach(element => {
+    DISPLAYED_IMAGES.forEach(element => {
 
         document.getElementById('grid').innerHTML += `
             <div class="grid-item" id="${element.img_url}">
@@ -95,32 +98,26 @@ document.getElementById('grid').addEventListener('click', async event => {
 })
 
 //search function
-document.getElementById('searchButton').addEventListener('click', async () => {
+document.getElementById('searchInput').addEventListener('input', async () => {
     const searchTerm = document.getElementById('searchInput').value;
 
     if (searchTerm.trim() !== '') {
-        try {
-            const response = await fetch('http://localhost:3000/artpieces');
-            const allArtPieces = await response.json();
 
-            if (Array.isArray(allArtPieces)) {
-                // Filter art pieces based on search term
-                const searchResults = allArtPieces.filter(piece => 
-                    piece.artist.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    piece.title.toLowerCase().includes(searchTerm.toLowerCase())
-                );
+        // Filter art pieces based on search term
+            const searchResults = DISPLAYED_IMAGES.filter((piece) => {
+                if(piece.artist.includes(searchTerm)){
+                    return true
+                }
+            });
 
-                displayImages(searchResults);
-            } else {
-                console.error('Invalid response from server:', allArtPieces);
-            }
+            DISPLAYED_IMAGES = searchResults
+            console.log(DISPLAYED_IMAGES)
 
-        } catch (error) {
-            console.error('Error searching:', error);
-        }
-    } 
+    } else {
+        DISPLAYED_IMAGES = ALL_IMAGES
+    }
+
+    displayImages();
 })
 
-
-
-displayImages();
+fetchAndDisplayImages();
