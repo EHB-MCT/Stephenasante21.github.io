@@ -38,9 +38,52 @@ async function displayImages(){
 
     images.forEach(element => {
         document.getElementById('grid').innerHTML += `
+        <div class="grid-item" id="${element.img_url}">
             <div class="grid-item" id="${element.img_url}"><img src="../databaseverzameling/${element.img_url}.jpg" alt=""></div>
+            <button class="delete-button" type="submit" id="submit">DELETE</button>
+        </div>        
         `
     });
 }
 
+//delete an art piece from the database
+document.getElementById('grid').addEventListener('click', async event => {
+    const clickedElement = event.target;
+    const userId = user.uuid;
+
+    if(clickedElement.classList.contains('delete-button')){
+        const gridItem = clickedElement.closest('.grid-item');
+        const imgElement = gridItem.querySelector('img');
+
+        const img_url = imgElement.getAttribute('src').replace('../databaseverzameling/', '').replace('.jpg', '');
+
+        const data = {
+            img_url
+        }
+
+        try{
+            const response = await fetch(`http://localhost:3000/deleteartpiece/${userId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)                
+            });
+
+            const result = await response.json();
+
+            if(result.status === 'Succes'){
+                console.log('Art piece deleted', result.message);
+
+                gridItem.remove();
+            } else {
+                console.error('Error deleting art piece', result.message)
+            }
+        } catch (error){
+            console.error('Error deleting art piece', error);
+        }
+    }
+})
+
 displayImages();
+

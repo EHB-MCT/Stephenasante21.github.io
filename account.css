@@ -114,7 +114,7 @@ h2{
     margin: auto;
 }
 .grid-item {
-    margin: 5px;
+    margin: 2px;
     overflow: hidden;
     border-radius: 10px;
     height: fit-content;
@@ -124,6 +124,24 @@ h2{
     display: block;
     height: auto;
 }
-.grid-item:hover{
+.grid-item img:hover{
     opacity: 50%;
+}
+
+/*button*/
+.delete-button{
+    display: none;
+    padding: 8px 25px;
+    background-color: #939196;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
+.grid-item:hover .delete-button{
+    display: block;
+}
+button:hover{
+    background-color: #BF0603;
+    color: #E4E4E4;
 }

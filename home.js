@@ -51,7 +51,6 @@ async function displayImages(){
 document.getElementById('grid').addEventListener('click', async event => {
     const clickedEelement = event.target;
     const user = JSON.parse(sessionStorage.getItem('user'));
-    const userId = user.uuid;
 
     if(clickedEelement.classList.contains('save-button')){
         const gridItem = clickedEelement.closest('.grid-item');
@@ -94,6 +93,34 @@ document.getElementById('grid').addEventListener('click', async event => {
 
 
 })
+
+//search function
+document.getElementById('searchButton').addEventListener('click', async () => {
+    const searchTerm = document.getElementById('searchInput').value;
+
+    if (searchTerm.trim() !== '') {
+        try {
+            const response = await fetch('http://localhost:3000/artpieces');
+            const allArtPieces = await response.json();
+
+            if (Array.isArray(allArtPieces)) {
+                // Filter art pieces based on search term
+                const searchResults = allArtPieces.filter(piece => 
+                    piece.artist.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    piece.title.toLowerCase().includes(searchTerm.toLowerCase())
+                );
+
+                displayImages(searchResults);
+            } else {
+                console.error('Invalid response from server:', allArtPieces);
+            }
+
+        } catch (error) {
+            console.error('Error searching:', error);
+        }
+    } 
+})
+
 
 
 displayImages();
