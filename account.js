@@ -39,7 +39,7 @@ async function displayImages(){
     images.forEach(element => {
         document.getElementById('grid').innerHTML += `
         <div class="grid-item" id="${element.img_url}">
-            <div class="grid-item" id="${element.img_url}"><img src="../databaseverzameling/${element.img_url}.jpg" alt=""></div>
+            <div class="grid-item" id="${element.img_url}"><img src="/web2-frontend-Stephenasante21/databaseverzameling/${element.img_url}.jpg" alt=""></div>
             <button class="delete-button" type="submit" id="submit">DELETE</button>
         </div>        
         `
@@ -55,7 +55,7 @@ document.getElementById('grid').addEventListener('click', async event => {
         const gridItem = clickedElement.closest('.grid-item');
         const imgElement = gridItem.querySelector('img');
 
-        const img_url = imgElement.getAttribute('src').replace('../databaseverzameling/', '').replace('.jpg', '');
+        const img_url = imgElement.getAttribute('src').replace('/web2-frontend-Stephenasante21/databaseverzameling', '').replace('.jpg', '');
 
         const data = {
             img_url

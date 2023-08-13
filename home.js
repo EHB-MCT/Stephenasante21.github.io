@@ -41,7 +41,7 @@ async function displayImages(){
 
         document.getElementById('grid').innerHTML += `
             <div class="grid-item" id="${element.img_url}">
-                <img src="../databaseverzameling/${element.img_url}.jpg" alt="">
+                <img src="/web2-frontend-Stephenasante21/databaseverzameling/${element.img_url}.jpg" alt="">
                 <h2>${element.title}</h2>
                 <h3>${element.artist}</h3>
                 <button class="save-button" type="submit" id="submit">SAVE</button>
@@ -59,7 +59,7 @@ document.getElementById('grid').addEventListener('click', async event => {
         const gridItem = clickedEelement.closest('.grid-item');
         const imgElement = gridItem.querySelector('img');
 
-        const img_url = imgElement.getAttribute('src').replace('../databaseverzameling/', '').replace('.jpg', '');
+        const img_url = imgElement.getAttribute('src').replace('/web2-frontend-Stephenasante21/databaseverzameling/', '').replace('.jpg', '');
         const artist = gridItem.querySelector('h3').textContent;
         const title = gridItem.querySelector('h2').textContent;
         
