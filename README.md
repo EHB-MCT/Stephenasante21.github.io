@@ -28,7 +28,7 @@ hier is de link https://xd.adobe.com/view/e547a10b-21ac-49c4-8c0e-c4877b3e5a04-b
 SOURCES
 voor de login en register system - https://www.youtube.com/watch?v=BpzwUTzFGpI&list=PLGsnrfn8XzXii2J5-Jpqufypu6upxcSGx&index=30
 voor errors - klasgenoten en stackoverflow
-
+chat gpt - error handling
 
 
 DATABASE
