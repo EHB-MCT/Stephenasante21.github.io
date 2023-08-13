@@ -10,7 +10,7 @@ document.getElementById('form').addEventListener("submit", event => {
 
         if(result){
             sessionStorage.setItem('user', JSON.stringify(result.data))
-            window.location.href = "/web2-frontend-Stephenasante21/home.html"
+            window.location.href = "/web2-frontend-Stephenasante21/index.html"
         }else {
             console.log("No user with this credentials")
         }
