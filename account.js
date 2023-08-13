@@ -22,7 +22,7 @@ const userId = user.uuid;
 //fetch the data
 async function fetchImages(){
     try{
-        const response = await fetch(`http://localhost:3000/savedartpieces/${userId}`);
+        const response = await fetch(`https://web-2-art-dump.onrender.com/savedartpieces/${userId}`);
         return await response.json();
         
     } catch (error){
@@ -62,7 +62,7 @@ document.getElementById('grid').addEventListener('click', async event => {
         }
 
         try{
-            const response = await fetch(`http://localhost:3000/deleteartpiece/${userId}`, {
+            const response = await fetch(`https://web-2-art-dump.onrender.com/deleteartpiece/${userId}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'

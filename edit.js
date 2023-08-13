@@ -16,7 +16,7 @@ document.getElementById('save').addEventListener("click", async event => {
         password: newPassword,
     };
  
-    getData(`http://localhost:3000/update/${userId}`, "PUT", updatedUser)
+    getData(`https://web-2-art-dump.onrender.com/update/${userId}`, "PUT", updatedUser)
         .then(result => {
             if (result.status === "Success") {
                 alert("User successfully updated!");
@@ -43,7 +43,7 @@ document.getElementById('delete_account').addEventListener("click", async event 
     const userId = user.uuid;
 
     try {
-        const response = await fetch(`http://localhost:3000/delete/${userId}`, {
+        const response = await fetch(`https://web-2-art-dump.onrender.com/delete/${userId}`, {
             method: "DELETE",
             headers: {
                 'Content-Type': "application/json"

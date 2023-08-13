@@ -21,7 +21,7 @@ const imagegrid = document.getElementById("grid");
 //fetch the data
 async function fetchAndDisplayImages(){
     try{
-        const response = await fetch("http://localhost:3000/artpieces");
+        const response = await fetch("https://web-2-art-dump.onrender.com/artpieces");
         DISPLAYED_IMAGES = ALL_IMAGES =  await response.json();
 
         console.log(ALL_IMAGES)
@@ -74,7 +74,7 @@ document.getElementById('grid').addEventListener('click', async event => {
         }
 
         try{
-            const response = await fetch(`http://localhost:3000/saveartpiece/${userId}`, {
+            const response = await fetch(`https://web-2-art-dump.onrender.com/saveartpiece/${userId}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -9,7 +9,7 @@ document.getElementById('form').addEventListener("submit", event => {
 
     //check for the password
     if(user.password == user.password2){
-        getData("http://localhost:3000/register", "POST", user).then(data => {
+        getData("https://web-2-art-dump.onrender.com/register", "POST", user).then(data => {
             window.location.href = "/web2-frontend-Stephenasante21/Login.html"
             alert(data.message)
         })
